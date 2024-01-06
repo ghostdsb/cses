@@ -3,26 +3,44 @@ use std::{io, str::FromStr};
 
 fn main() {
     let n = input_single(0_usize);
-    let apples: Vec<u64> = input_vector(vec![]);
-    let ans = solution(n, apples);
-    println!("{}", ans);
+    for _ in 0..n{
+        let q = input_single(0_u64);
+        let ans = solution(q);
+        println!("{}", ans);
+    }
 }
 
-fn solution(n: usize, input: Vec<u64>) -> u64 {
-    let total_sum: u64 = input.iter().sum();
-    let mut ans = u64::MAX;
-    for i in 0..(1 << n){
-        let mut sum = 0;
-        for j in 0..n{
-            if i>>j & 1 == 1{
-                sum += input[j];
-            }
-        }
-        let rest = total_sum - sum;
-        let diff = rest.abs_diff(sum);
-        ans = ans.min(diff);
+fn solution(n: u64) -> u64 {
+    if n < 10{
+        return n
     }
-    ans
+    let mut i = 0;
+    let mut sum = 0;
+    let mut last_limit = 0;
+    loop {
+        let block = 9 * (i as u64+1) * 10_u64.pow(i);
+        sum += block ;
+        if sum > n{
+            sum -= block;
+            break;
+        }
+        last_limit += 9 * 10_u64.pow(i);
+        i+=1;
+    }
+    i-=1;
+    let last_nine = sum;
+    let residue = n - last_nine;
+    let nth_num = residue / (i as u64+2);
+    let digit_index = residue % (i as u64 +2);
+    let mut num = last_limit + nth_num;
+    if digit_index != 0{
+        num += 1;
+        let digits = i + 2;
+        let x = num / 10_u64.pow((digits as u64-digit_index) as u32);
+        return x % 10;
+    }else{
+        return num % 10;
+    }
 }
 
 fn input_single<T>(default: T) -> T
