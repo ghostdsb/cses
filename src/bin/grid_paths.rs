@@ -1,5 +1,6 @@
-use std::fmt::Debug;
-use std::{io, str::FromStr};
+//grid_paths
+
+use cses::util::{input_vector, input_single};
 
 const MAX: u64 = 1e9 as u64 + 7;
 fn main() {
@@ -30,35 +31,6 @@ fn solve(n: u64, grid: &Vec<Vec<char>>) -> u64 {
             }
         }
     }
+    // dbg!(&memo);
     memo[n as usize -1][n as usize-1]
-}
-
-
-
-fn input_single<T>(default: T) -> T
-where
-    T: FromStr + Debug,
-    <T as FromStr>::Err: Debug,
-{
-    let mut input = String::new();
-    match io::stdin().read_line(&mut input) {
-        Ok(_) => input.trim().parse::<T>().unwrap(),
-        Err(_) => default,
-    }
-}
-
-fn input_vector<T>(default: Vec<T>) -> Vec<T>
-where
-    T: FromStr + Debug,
-    <T as FromStr>::Err: Debug,
-{
-    let mut input = String::new();
-    match io::stdin().read_line(&mut input) {
-        Ok(_) => input
-            .as_str()
-            .split_whitespace()
-            .map(|n| n.parse().unwrap())
-            .collect(),
-        Err(_) => default,
-    }
 }
