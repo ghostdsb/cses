@@ -1,5 +1,4 @@
-use std::fmt::Debug;
-use std::{io, str::FromStr};
+use cses::util::{input_single, input_vector};
 
 fn main() {
     let input: Vec<usize> = input_vector(vec![]);
@@ -39,7 +38,7 @@ fn main() {
             }
         }
     }
-    // dbg!(&paths);
+    dbg!(&paths);
     if !found {
         println!("IMPOSSIBLE");
     } else {
@@ -61,30 +60,46 @@ fn main() {
     }
 }
 
-fn input_single<T>(default: T) -> T
-where
-    T: FromStr + Debug,
-    <T as FromStr>::Err: Debug,
-{
-    let mut input = String::new();
-    match io::stdin().read_line(&mut input) {
-        Ok(_) => input.trim().parse::<T>().unwrap(),
-        Err(_) => default,
-    }
-}
+// fn solve(n: usize, a: &[usize], b: &[usize]) -> String {
+//     let mut adj_vecs = vec![Vec::new(); n];
+//     for i in 0..a.len() {
+//         adj_vecs[a[i] - 1].push(b[i] - 1);
+//         adj_vecs[b[i] - 1].push(a[i] - 1);
+//     }
 
-fn input_vector<T>(default: Vec<T>) -> Vec<T>
-where
-    T: FromStr + Debug,
-    <T as FromStr>::Err: Debug,
-{
-    let mut input = String::new();
-    match io::stdin().read_line(&mut input) {
-        Ok(_) => input
-            .as_str()
-            .split_whitespace()
-            .map(|n| n.parse().unwrap())
-            .collect(),
-        Err(_) => default,
-    }
-}
+//     let mut nexts = vec![usize::MAX; n];
+//     nexts[n - 1] = n - 1;
+
+//     let mut queue = VecDeque::new();
+//     queue.push_back(n - 1);
+
+//     while let Some(head) = queue.pop_front() {
+//         for &adj in &adj_vecs[head] {
+//             if nexts[adj] == usize::MAX {
+//                 nexts[adj] = head;
+//                 queue.push_back(adj);
+//             }
+//         }
+//     }
+
+//     if nexts[0] == usize::MAX {
+//         return String::from("IMPOSSIBLE");
+//     }
+
+//     let mut node = 0;
+//     let mut route = vec![node + 1];
+//     while node != n - 1 {
+//         node = nexts[node];
+//         route.push(node + 1);
+//     }
+
+//     format!(
+//         "{}\n{}",
+//         route.len(),
+//         route
+//             .iter()
+//             .map(|x| x.to_string())
+//             .collect::<Vec<_>>()
+//             .join(" ")
+//     )
+// }

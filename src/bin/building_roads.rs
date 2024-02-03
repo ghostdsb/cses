@@ -1,49 +1,36 @@
 use cses::util::{input_single, input_vector};
-use std::collections::HashMap;
 
 fn main() {
-    let mut adj: HashMap<usize, Vec<usize>> = HashMap::new();
     let input: Vec<usize> = input_vector(vec![]);
     let (n, m) = (input[0], input[1]);
-    let mut grid: Vec<Vec<bool>> = vec![vec![false; n + 1]; n + 1];
+    let mut adj: Vec<Vec<usize>> = vec![vec![]; n + 1];
     let mut visited: Vec<bool> = vec![false; n + 1];
-
+    let mut bridges: Vec<usize> = vec![];
     for _ in 0..m {
         let input: Vec<usize> = input_vector(vec![]);
         let (a, b) = (input[0], input[1]);
-        grid[a][b] = true;
-        grid[b][a] = true;
-        adj.entry(a).and_modify(|l| l.push(b)).or_insert(vec![b]);
-        adj.entry(b).and_modify(|l| l.push(a)).or_insert(vec![a]);
+        adj[a].push(b);
+        adj[b].push(a);
     }
 
-    let mut g: Vec<usize> = vec![];
     for i in 1..=n {
         if !visited[i] {
-            let mut stack: Vec<usize> = vec![];
-            // let mut s: Vec<usize> = vec![];
-            // s.push(i);
-            visited[i] = true;
-            stack.push(i);
-
-            while !stack.is_empty() {
-                let top = stack.pop().unwrap();
-                visited[top] = true;
-
-                if let Some(list) = adj.get(&top) {
-                    for j in list {
-                        if !visited[*j] && *j != top && grid[top][*j] {
-                            stack.push(*j);
-                        }
-                    }
-                }
-            }
-            g.push(i);
+            bridges.push(i);
+            dfs(i, &adj, &mut visited);
         }
     }
-    // dbg!(g);
-    println!("{}", g.len() - 1);
-    for i in 1..g.len() {
-        println!("{} {}", g[0], g[i]);
+    dbg!(&bridges);
+    println!("{}", bridges.len() - 1);
+    for i in 1..bridges.len() {
+        println!("{} {}", bridges[0], bridges[i]);
+    }
+}
+
+fn dfs(node: usize, adj: &Vec<Vec<usize>>, visited: &mut Vec<bool>) {
+    visited[node] = true;
+    for n in adj[node].iter() {
+        if !visited[*n] {
+            dfs(*n, adj, visited);
+        }
     }
 }
