@@ -1,5 +1,4 @@
-use std::fmt::Debug;
-use std::{io, str::FromStr};
+use cses::util::{input_single, input_vector};
 
 use std::collections::VecDeque;
 fn main() {
@@ -42,7 +41,7 @@ fn main() {
             }
         }
     }
-    // dbg!(&tree);
+    dbg!(&tree);
 
     // dbg!(&colors);
     for i in 1..=n {
@@ -50,30 +49,38 @@ fn main() {
     }
 }
 
-// fn input_single<T>(default: T) -> T
-// where
-//     T: FromStr + Debug,
-//     <T as FromStr>::Err: Debug,
-// {
-//     let mut input = String::new();
-//     match io::stdin().read_line(&mut input) {
-//         Ok(_) => input.trim().parse::<T>().unwrap(),
-//         Err(_) => default,
+// fn main() {
+//     let n = read!(usize);
+//     let m = read!(usize);
+//     let mut g: Vec<Vec<usize>> = vec![vec![];n+1];
+//     let mut team: Vec<i64> = vec![0;n+1];
+
+//     for _ in 0..m {
+//         let a = read!(usize);
+//         let b = read!(usize);
+//         g[a].push(b);
+//         g[b].push(a);
+//     }
+
+//     for i in 1..=n {
+//         if team[i] == 0 {
+//             let mut q = VecDeque::new();
+//             q.push_back((i, 1));
+//             while let Some((v, t)) = q.pop_front() {
+//                 if team[v] == 0 {
+//                     team[v] = t;
+//                     for &u in &g[v] {
+//                         q.push_back((u, 3-t));
+//                     }
+//                 } else if team[v] != t {
+//                     println!("IMPOSSIBLE");
+//                     return;
+//                 }
+//             }
+//         }
+//     }
+
+//     for v in &team[1..] {
+//         print!("{} ", v);
 //     }
 // }
-
-fn input_vector<T>(default: Vec<T>) -> Vec<T>
-where
-    T: FromStr + Debug,
-    <T as FromStr>::Err: Debug,
-{
-    let mut input = String::new();
-    match io::stdin().read_line(&mut input) {
-        Ok(_) => input
-            .as_str()
-            .split_whitespace()
-            .map(|n| n.parse().unwrap())
-            .collect(),
-        Err(_) => default,
-    }
-}
