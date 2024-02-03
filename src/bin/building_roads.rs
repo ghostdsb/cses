@@ -1,7 +1,6 @@
-use std::fmt::Debug;
-use std::{io, str::FromStr};
-
+use cses::util::{input_single, input_vector};
 use std::collections::HashMap;
+
 fn main() {
     let mut adj: HashMap<usize, Vec<usize>> = HashMap::new();
     let input: Vec<usize> = input_vector(vec![]);
@@ -22,6 +21,8 @@ fn main() {
     for i in 1..=n {
         if !visited[i] {
             let mut stack: Vec<usize> = vec![];
+            // let mut s: Vec<usize> = vec![];
+            // s.push(i);
             visited[i] = true;
             stack.push(i);
 
@@ -40,36 +41,9 @@ fn main() {
             g.push(i);
         }
     }
+    // dbg!(g);
     println!("{}", g.len() - 1);
     for i in 1..g.len() {
         println!("{} {}", g[0], g[i]);
-    }
-}
-
-fn input_single<T>(default: T) -> T
-where
-    T: FromStr + Debug,
-    <T as FromStr>::Err: Debug,
-{
-    let mut input = String::new();
-    match io::stdin().read_line(&mut input) {
-        Ok(_) => input.trim().parse::<T>().unwrap(),
-        Err(_) => default,
-    }
-}
-
-fn input_vector<T>(default: Vec<T>) -> Vec<T>
-where
-    T: FromStr + Debug,
-    <T as FromStr>::Err: Debug,
-{
-    let mut input = String::new();
-    match io::stdin().read_line(&mut input) {
-        Ok(_) => input
-            .as_str()
-            .split_whitespace()
-            .map(|n| n.parse().unwrap())
-            .collect(),
-        Err(_) => default,
     }
 }
