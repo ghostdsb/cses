@@ -7,29 +7,29 @@
 // 3
 
 use cses::util::input_single;
- 
+
 const MAX: u128 = 10_u128.pow(9) + 7;
- 
+
 fn main() {
     let input = input_single(0_u128);
     let mut d: Vec<i128> = vec![-1; (input + 1) as usize];
     let ans = solution(input as i64, &mut d);
     print!("{}", ans % MAX);
 }
- 
+
 fn solution(n: i64, dp: &mut Vec<i128>) -> u128 {
     if n < 0 {
         return 0;
     }
- 
+
     if n == 0 {
         return 1;
     }
- 
+
     if dp[n as usize] != -1 {
         return dp[n as usize] as u128;
     }
- 
+
     let mut ans = 0;
     for i in (1..=6).rev() {
         ans = (ans + solution(n - i, dp)) % MAX;

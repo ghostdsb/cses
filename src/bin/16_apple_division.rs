@@ -10,10 +10,10 @@ fn main() {
 fn solution(n: usize, input: Vec<u64>) -> u64 {
     let total_sum: u64 = input.iter().sum();
     let mut ans = u64::MAX;
-    for i in 0..(1 << n){
+    for i in 0..(1 << n) {
         let mut sum = 0;
-        for j in 0..n{
-            if i>>j & 1 == 1{
+        for j in 0..n {
+            if i >> j & 1 == 1 {
                 sum += input[j];
                 // print!("{} ", input[j]);
             }
@@ -58,7 +58,7 @@ mod tests {
     fn it_works_3() {
         let input = vec![1, 1];
 
-        let output = solution(input.len(),input);
+        let output = solution(input.len(), input);
         assert_eq!(output, 0);
     }
 

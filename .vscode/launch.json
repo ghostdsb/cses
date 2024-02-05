@@ -1,0 +1,1174 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in library 'cses'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--lib",
+                    "--package=cses"
+                ],
+                "filter": {
+                    "name": "cses",
+                    "kind": "lib"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'building_roads'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=building_roads",
+                    "--package=cses"
+                ],
+                "filter": {
+                    "name": "building_roads",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'building_roads'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=building_roads",
+                    "--package=cses"
+                ],
+                "filter": {
+                    "name": "building_roads",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable '13_gray_code'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=13_gray_code",
+                    "--package=cses"
+                ],
+                "filter": {
+                    "name": "13_gray_code",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable '13_gray_code'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=13_gray_code",
+                    "--package=cses"
+                ],
+                "filter": {
+                    "name": "13_gray_code",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'building_teams'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=building_teams",
+                    "--package=cses"
+                ],
+                "filter": {
+                    "name": "building_teams",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'building_teams'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=building_teams",
+                    "--package=cses"
+                ],
+                "filter": {
+                    "name": "building_teams",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'monsters'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=monsters",
+                    "--package=cses"
+                ],
+                "filter": {
+                    "name": "monsters",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'monsters'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=monsters",
+                    "--package=cses"
+                ],
+                "filter": {
+                    "name": "monsters",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable '11_coin_piles'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=11_coin_piles",
+                    "--package=cses"
+                ],
+                "filter": {
+                    "name": "11_coin_piles",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable '11_coin_piles'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=11_coin_piles",
+                    "--package=cses"
+                ],
+                "filter": {
+                    "name": "11_coin_piles",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'minimizing_coins'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=minimizing_coins",
+                    "--package=cses"
+                ],
+                "filter": {
+                    "name": "minimizing_coins",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'minimizing_coins'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=minimizing_coins",
+                    "--package=cses"
+                ],
+                "filter": {
+                    "name": "minimizing_coins",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable '12_palindrome_reorder'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=12_palindrome_reorder",
+                    "--package=cses"
+                ],
+                "filter": {
+                    "name": "12_palindrome_reorder",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable '12_palindrome_reorder'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=12_palindrome_reorder",
+                    "--package=cses"
+                ],
+                "filter": {
+                    "name": "12_palindrome_reorder",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'coin_combination_1'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=coin_combination_1",
+                    "--package=cses"
+                ],
+                "filter": {
+                    "name": "coin_combination_1",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'coin_combination_1'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=coin_combination_1",
+                    "--package=cses"
+                ],
+                "filter": {
+                    "name": "coin_combination_1",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'coin_combination_2'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=coin_combination_2",
+                    "--package=cses"
+                ],
+                "filter": {
+                    "name": "coin_combination_2",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'coin_combination_2'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=coin_combination_2",
+                    "--package=cses"
+                ],
+                "filter": {
+                    "name": "coin_combination_2",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'counting_rooms'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=counting_rooms",
+                    "--package=cses"
+                ],
+                "filter": {
+                    "name": "counting_rooms",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'counting_rooms'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=counting_rooms",
+                    "--package=cses"
+                ],
+                "filter": {
+                    "name": "counting_rooms",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'book_shop'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=book_shop",
+                    "--package=cses"
+                ],
+                "filter": {
+                    "name": "book_shop",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'book_shop'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=book_shop",
+                    "--package=cses"
+                ],
+                "filter": {
+                    "name": "book_shop",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable '07_two_knights'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=07_two_knights",
+                    "--package=cses"
+                ],
+                "filter": {
+                    "name": "07_two_knights",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable '07_two_knights'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=07_two_knights",
+                    "--package=cses"
+                ],
+                "filter": {
+                    "name": "07_two_knights",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable '03_repetitions'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=03_repetitions",
+                    "--package=cses"
+                ],
+                "filter": {
+                    "name": "03_repetitions",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable '03_repetitions'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=03_repetitions",
+                    "--package=cses"
+                ],
+                "filter": {
+                    "name": "03_repetitions",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'round_trip'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=round_trip",
+                    "--package=cses"
+                ],
+                "filter": {
+                    "name": "round_trip",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'round_trip'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=round_trip",
+                    "--package=cses"
+                ],
+                "filter": {
+                    "name": "round_trip",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'currency_conversion'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=currency_conversion",
+                    "--package=cses"
+                ],
+                "filter": {
+                    "name": "currency_conversion",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'currency_conversion'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=currency_conversion",
+                    "--package=cses"
+                ],
+                "filter": {
+                    "name": "currency_conversion",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'message_route'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=message_route",
+                    "--package=cses"
+                ],
+                "filter": {
+                    "name": "message_route",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'message_route'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=message_route",
+                    "--package=cses"
+                ],
+                "filter": {
+                    "name": "message_route",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'labyrinth'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=labyrinth",
+                    "--package=cses"
+                ],
+                "filter": {
+                    "name": "labyrinth",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'labyrinth'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=labyrinth",
+                    "--package=cses"
+                ],
+                "filter": {
+                    "name": "labyrinth",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'grid_paths'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=grid_paths",
+                    "--package=cses"
+                ],
+                "filter": {
+                    "name": "grid_paths",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'grid_paths'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=grid_paths",
+                    "--package=cses"
+                ],
+                "filter": {
+                    "name": "grid_paths",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable '18_digit_queries'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=18_digit_queries",
+                    "--package=cses"
+                ],
+                "filter": {
+                    "name": "18_digit_queries",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable '18_digit_queries'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=18_digit_queries",
+                    "--package=cses"
+                ],
+                "filter": {
+                    "name": "18_digit_queries",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'dice_combination'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=dice_combination",
+                    "--package=cses"
+                ],
+                "filter": {
+                    "name": "dice_combination",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'dice_combination'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=dice_combination",
+                    "--package=cses"
+                ],
+                "filter": {
+                    "name": "dice_combination",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable '04_increasing_array'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=04_increasing_array",
+                    "--package=cses"
+                ],
+                "filter": {
+                    "name": "04_increasing_array",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable '04_increasing_array'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=04_increasing_array",
+                    "--package=cses"
+                ],
+                "filter": {
+                    "name": "04_increasing_array",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable '14_tower_of_hanoi'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=14_tower_of_hanoi",
+                    "--package=cses"
+                ],
+                "filter": {
+                    "name": "14_tower_of_hanoi",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable '14_tower_of_hanoi'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=14_tower_of_hanoi",
+                    "--package=cses"
+                ],
+                "filter": {
+                    "name": "14_tower_of_hanoi",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable '05_permutations'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=05_permutations",
+                    "--package=cses"
+                ],
+                "filter": {
+                    "name": "05_permutations",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable '05_permutations'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=05_permutations",
+                    "--package=cses"
+                ],
+                "filter": {
+                    "name": "05_permutations",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable '01_weird_algorithm'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=01_weird_algorithm",
+                    "--package=cses"
+                ],
+                "filter": {
+                    "name": "01_weird_algorithm",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable '01_weird_algorithm'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=01_weird_algorithm",
+                    "--package=cses"
+                ],
+                "filter": {
+                    "name": "01_weird_algorithm",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable '08_two_sets'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=08_two_sets",
+                    "--package=cses"
+                ],
+                "filter": {
+                    "name": "08_two_sets",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable '08_two_sets'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=08_two_sets",
+                    "--package=cses"
+                ],
+                "filter": {
+                    "name": "08_two_sets",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'solution_file'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=solution_file",
+                    "--package=cses"
+                ],
+                "filter": {
+                    "name": "solution_file",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'solution_file'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=solution_file",
+                    "--package=cses"
+                ],
+                "filter": {
+                    "name": "solution_file",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable '02_missing_number'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=02_missing_number",
+                    "--package=cses"
+                ],
+                "filter": {
+                    "name": "02_missing_number",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable '02_missing_number'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=02_missing_number",
+                    "--package=cses"
+                ],
+                "filter": {
+                    "name": "02_missing_number",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'removing_digits'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=removing_digits",
+                    "--package=cses"
+                ],
+                "filter": {
+                    "name": "removing_digits",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'removing_digits'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=removing_digits",
+                    "--package=cses"
+                ],
+                "filter": {
+                    "name": "removing_digits",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'shortest_routes'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=shortest_routes",
+                    "--package=cses"
+                ],
+                "filter": {
+                    "name": "shortest_routes",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'shortest_routes'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=shortest_routes",
+                    "--package=cses"
+                ],
+                "filter": {
+                    "name": "shortest_routes",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable '16_apple_division'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=16_apple_division",
+                    "--package=cses"
+                ],
+                "filter": {
+                    "name": "16_apple_division",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable '16_apple_division'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=16_apple_division",
+                    "--package=cses"
+                ],
+                "filter": {
+                    "name": "16_apple_division",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable '10_trailing_zeros'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=10_trailing_zeros",
+                    "--package=cses"
+                ],
+                "filter": {
+                    "name": "10_trailing_zeros",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable '10_trailing_zeros'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=10_trailing_zeros",
+                    "--package=cses"
+                ],
+                "filter": {
+                    "name": "10_trailing_zeros",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        }
+    ]
+}
