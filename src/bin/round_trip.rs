@@ -1,3 +1,7 @@
+// cycle detection
+// dfs from each unvisited node
+// keep track of parents of nodes
+// if an visited node encountered with different parent; cycle detected
 use cses::util::{input_single, input_vector};
 
 fn main() {
