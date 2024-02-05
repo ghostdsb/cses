@@ -37,7 +37,7 @@ fn solution(n: u64) -> u64 {
     let nth_num = residue / (i as u64+2);
     let digit_index = residue % (i as u64 +2);
     let mut num = last_limit + nth_num;
-    let mut ans = 0;
+    let ans;
     if digit_index != 0{
         num += 1;
         let digits = i + 2;
