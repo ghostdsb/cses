@@ -7,6 +7,20 @@ impl Heap {
         Self { values: vec![0] }
     }
 
+    pub fn from(vals: Vec<u32>) -> Self {
+        let mut h = Self::new();
+        for v in vals.iter() {
+            h.values.push(*v);
+        }
+
+        h.heapify();
+        h
+    }
+
+    pub fn print(&self){
+        println!("{:?}", self.values);
+    }
+
     pub fn insert(&mut self, val: u32) {
         self.values.push(val);
         let mut curr = self.values.len() - 1;
@@ -48,13 +62,41 @@ impl Heap {
     }
 
     fn heapify(&mut self) {
-        
+        for i in (1..=self.values.len()).rev() {
+            self.heapify_h(i)
+        }
+    }
+
+    fn heapify_h(&mut self, i: usize) {
+        let left = 2 * i;
+        let right = 2 * i + 1;
+        let mut smallest = i;
+        if left < self.values.len() && self.values[i] > self.values[left] {
+            smallest = left;
+        }
+        if right < self.values.len() && self.values[smallest] > self.values[right] {
+            smallest = right;
+        }
+        if smallest != i {
+            (self.values[i], self.values[smallest]) = (self.values[smallest], self.values[i]);
+            self.heapify_h(smallest)
+        }
     }
 }
 
 #[cfg(test)]
 mod tests {
     use super::*;
+
+    #[test]
+    fn heapify_works() {
+        let mut heap = Heap::from(vec![51, 15, 13, 14, 5,7, 10]);
+        heap.print();
+        let top = heap.retrieve();
+        assert_eq!(top, Some(5));
+        let top = heap.retrieve();
+        assert_eq!(top, Some(7));
+    }
 
     #[test]
     fn it_works() {
@@ -66,6 +108,7 @@ mod tests {
         heap.insert(5);
         heap.insert(7);
         heap.insert(10);
+        heap.print();
         let top = heap.retrieve();
         assert_eq!(top, Some(5));
     }
