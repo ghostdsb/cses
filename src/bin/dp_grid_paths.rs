@@ -1,6 +1,6 @@
 //grid_paths
 
-use cses::util::{input_single, input_vector};
+use cses::util::{input_single};
 
 const MAX: u64 = 1e9 as u64 + 7;
 fn main() {

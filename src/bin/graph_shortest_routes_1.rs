@@ -1,7 +1,7 @@
 // single source shortest path algo (SSSP)
 // dijkstra from 1st node using min-heap
 
-use cses::util::{input_single, input_vector};
+use cses::util::{input_vector};
 
 use std::collections::BinaryHeap;
 

@@ -1,6 +1,6 @@
 // bellman ford
 
-use cses::util::{input_single, input_vector};
+use cses::util::{input_vector};
 
 #[derive(Debug, Clone, Copy)]
 struct Edge {
