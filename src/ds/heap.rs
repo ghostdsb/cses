@@ -17,7 +17,7 @@ impl Heap {
         h
     }
 
-    pub fn print(&self){
+    pub fn print(&self) {
         println!("{:?}", self.values);
     }
 
@@ -90,7 +90,7 @@ mod tests {
 
     #[test]
     fn heapify_works() {
-        let mut heap = Heap::from(vec![51, 15, 13, 14, 5,7, 10]);
+        let mut heap = Heap::from(vec![51, 15, 13, 14, 5, 7, 10]);
         heap.print();
         let top = heap.retrieve();
         assert_eq!(top, Some(5));
