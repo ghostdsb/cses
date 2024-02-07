@@ -1,4 +1,4 @@
-use cses::util::{input_vector};
+use cses::util::input_vector;
 
 use std::collections::VecDeque;
 fn main() {

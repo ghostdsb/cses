@@ -1,6 +1,6 @@
 // dijkstra
 
-use cses::util::{input_vector};
+use cses::util::input_vector;
 use std::collections::BinaryHeap;
 #[derive(Debug, PartialEq, Eq, Clone, Copy)]
 struct Edge {
@@ -52,7 +52,7 @@ fn main() {
     }
     distance_full[1] = 0;
     distance_disc[1] = 0;
-    dijkstra(&adj, &mut distance_full , &mut distance_disc );
+    dijkstra(&adj, &mut distance_full, &mut distance_disc);
     dbg!(&distance_full);
     dbg!(&distance_disc);
     println!("{}", distance_disc[n]);
@@ -64,28 +64,31 @@ fn dijkstra(adj: &Vec<Vec<Edge>>, distance_full: &mut Vec<usize>, distance_disc:
     while !heap.is_empty() {
         // dbg!(&heap);
         let top_node = heap.pop().unwrap();
-        if top_node.flag && distance_disc[top_node.city] < top_node.cost{
+        if top_node.flag && distance_disc[top_node.city] < top_node.cost {
             continue;
         }
-        if !top_node.flag && distance_full[top_node.city] < top_node.cost{
+        if !top_node.flag && distance_full[top_node.city] < top_node.cost {
             continue;
         }
         for &conn in adj[top_node.city].iter() {
-            if top_node.flag{
-                if distance_disc[conn.city] > conn.cost + top_node.cost{
+            if top_node.flag {
+                if distance_disc[conn.city] > conn.cost + top_node.cost {
                     distance_disc[conn.city] = conn.cost + top_node.cost;
                     heap.push(HeapNode::new(conn.city, conn.cost + top_node.cost, true));
                 }
-            }else{
-                if distance_full[conn.city] > conn.cost + top_node.cost{
+            } else {
+                if distance_full[conn.city] > conn.cost + top_node.cost {
                     distance_full[conn.city] = conn.cost + top_node.cost;
                     heap.push(HeapNode::new(conn.city, conn.cost + top_node.cost, false));
                 }
-                if distance_disc[conn.city] > conn.cost/2 + top_node.cost{
-                    distance_disc[conn.city] = conn.cost/2 + top_node.cost;
-                    heap.push(HeapNode::new(conn.city, conn.cost/2 + top_node.cost, true));
+                if distance_disc[conn.city] > conn.cost / 2 + top_node.cost {
+                    distance_disc[conn.city] = conn.cost / 2 + top_node.cost;
+                    heap.push(HeapNode::new(
+                        conn.city,
+                        conn.cost / 2 + top_node.cost,
+                        true,
+                    ));
                 }
-
             }
         }
     }

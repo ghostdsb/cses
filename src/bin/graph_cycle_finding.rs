@@ -1,5 +1,6 @@
-use std::fmt::Debug;
-use std::{io, str::FromStr};
+// bellman ford
+
+use cses::util::input_vector;
 
 #[derive(Debug, Clone, Copy)]
 struct Edge {
@@ -53,6 +54,7 @@ fn main() {
         let mut cycle: Vec<usize> = vec![x.unwrap()];
         let mut curr = x;
         while parents[curr.unwrap()] != x {
+            // print!("{} ",curr);
             curr = parents[curr.unwrap()];
             cycle.push(curr.unwrap());
         }
@@ -60,32 +62,6 @@ fn main() {
         cycle.push(cycle[0]);
         cycle.iter().for_each(|n| print!("{} ", n));
     }
-}
-
-pub fn input_single<T>(default: T) -> T
-where
-    T: FromStr + Debug,
-    <T as FromStr>::Err: Debug,
-{
-    let mut input = String::new();
-    match io::stdin().read_line(&mut input) {
-        Ok(_) => input.trim().parse::<T>().unwrap(),
-        Err(_) => default,
-    }
-}
-
-pub fn input_vector<T>(default: Vec<T>) -> Vec<T>
-where
-    T: FromStr + Debug,
-    <T as FromStr>::Err: Debug,
-{
-    let mut input = String::new();
-    match io::stdin().read_line(&mut input) {
-        Ok(_) => input
-            .as_str()
-            .split_whitespace()
-            .map(|n| n.parse().unwrap())
-            .collect(),
-        Err(_) => default,
-    }
+    // dbg!(x);
+    // dbg!(parents);
 }

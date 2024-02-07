@@ -2,7 +2,7 @@
 // dfs from each unvisited node
 // keep track of parents of nodes
 // if an visited node encountered with different parent; cycle detected
-use cses::util::{input_vector};
+use cses::util::input_vector;
 
 fn main() {
     let input: Vec<usize> = input_vector(vec![]);

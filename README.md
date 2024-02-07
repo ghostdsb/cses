@@ -42,3 +42,4 @@ GRAPH
 - [graph_shortest_routes_2](./src/bin/graph_shortest_routes_2.rs)
 - [graph_highscore](./src/bin/graph_highscore.rs)
 - [graph_flight_discount](./src/bin/graph_flight_discount.rs)
+- [graph_cycle_finding](./src/bin/graph_cycle_finding.rs)

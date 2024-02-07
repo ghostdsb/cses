@@ -1,4 +1,4 @@
-use cses::util::{input_vector};
+use cses::util::input_vector;
 
 fn main() {
     let input: Vec<usize> = input_vector(vec![]);
