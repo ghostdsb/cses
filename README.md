@@ -43,3 +43,4 @@ GRAPH
 - [graph_highscore](./src/bin/graph_highscore.rs)
 - [graph_flight_discount](./src/bin/graph_flight_discount.rs)
 - [graph_cycle_finding](./src/bin/graph_cycle_finding.rs)
+- [graph_flight_routes](./src/bin/graph_flight_routes.rs)

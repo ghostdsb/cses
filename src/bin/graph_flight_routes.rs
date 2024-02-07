@@ -1,6 +1,6 @@
-use std::fmt::Debug;
-use std::{io, str::FromStr};
+// single source K shortest paths
 
+use cses::util::input_vector;
 use std::collections::BinaryHeap;
 #[derive(Debug, Clone, Copy)]
 struct Edge {
@@ -47,8 +47,10 @@ fn main() {
         let (a, b, c) = (input[0], input[1], input[2]);
         adjacent[a].push(Edge::new(b, c));
     }
+    dbg!(&adjacent);
     let mut dist: Vec<Vec<usize>> = vec![vec![usize::MAX; k]; n + 1];
     dijkstra(&adjacent, &mut dist);
+    dbg!(&dist);
     dist[n].iter().for_each(|d| print!("{} ", d));
 }
 
@@ -57,6 +59,7 @@ fn dijkstra(adj: &Vec<Vec<Edge>>, dist: &mut Vec<Vec<usize>>) {
     heap.push(Node::new(1, 0));
     let k = dist[0].len();
     while !heap.is_empty() {
+        dbg!(&heap);
         let top_node = heap.pop().unwrap();
         if dist[top_node.city][k - 1] < top_node.cost {
             continue;
@@ -68,33 +71,5 @@ fn dijkstra(adj: &Vec<Vec<Edge>>, dist: &mut Vec<Vec<usize>>) {
                 heap.push(Node::new(node.city, node.cost + top_node.cost))
             }
         }
-    }
-}
-
-pub fn input_single<T>(default: T) -> T
-where
-    T: FromStr + Debug,
-    <T as FromStr>::Err: Debug,
-{
-    let mut input = String::new();
-    match io::stdin().read_line(&mut input) {
-        Ok(_) => input.trim().parse::<T>().unwrap(),
-        Err(_) => default,
-    }
-}
-
-pub fn input_vector<T>(default: Vec<T>) -> Vec<T>
-where
-    T: FromStr + Debug,
-    <T as FromStr>::Err: Debug,
-{
-    let mut input = String::new();
-    match io::stdin().read_line(&mut input) {
-        Ok(_) => input
-            .as_str()
-            .split_whitespace()
-            .map(|n| n.parse().unwrap())
-            .collect(),
-        Err(_) => default,
     }
 }
