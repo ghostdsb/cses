@@ -4,7 +4,13 @@ SINGLE SOURCE SHORTEST/LONGEST PATH
 - Bellman Ford when negative weights present (array of nodes)(DP)
 
 DETECTING CYCLES
-- Undirected graph:
+
+- Undirected graph
+    - DFS
+    - keep track of parents
+    - if node visited node encountered and node not parent; cycle detected
+
+- Directed graph:
     - for each node(to tackle disjointed graph) do
     - push unvisited node to stack; mark the node as tracked; mark the node visited
     - DFS traverse; do same for each child
