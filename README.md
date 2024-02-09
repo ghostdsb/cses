@@ -45,3 +45,4 @@ GRAPH
 - [graph_cycle_finding](./src/bin/graph_cycle_finding.rs)
 - [graph_flight_routes](./src/bin/graph_flight_routes.rs)
 - [graph_round_trip_2](./src/bin/graph_round_trip_2.rs)
+- [graph_course_schedule](./src/bin/graph_course_schedule.rs)
