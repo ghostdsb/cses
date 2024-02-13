@@ -48,3 +48,7 @@ GRAPH
 - [course_schedule](./src/bin/graph_course_schedule.rs)
 - [longest_flight_route](./src/bin/graph_longest_flight_route.rs)
 - [game_routes](./src/bin/graph_game_routes.rs)
+- [investigation](./src/bin/graph_investigation.rs)
+
+TREE
+- [subordinates](./src/bin/tree_subordinates.rs)

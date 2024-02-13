@@ -1,39 +1,10 @@
-use std::fmt::Debug;
-use std::{io, str::FromStr};
-
-pub fn input_single<T>(default: T) -> T
-where
-    T: FromStr + Debug,
-    <T as FromStr>::Err: Debug,
-{
-    let mut input = String::new();
-    match io::stdin().read_line(&mut input) {
-        Ok(_) => input.trim().parse::<T>().unwrap(),
-        Err(_) => default,
-    }
-}
-
-pub fn input_vector<T>(default: Vec<T>) -> Vec<T>
-where
-    T: FromStr + Debug,
-    <T as FromStr>::Err: Debug,
-{
-    let mut input = String::new();
-    match io::stdin().read_line(&mut input) {
-        Ok(_) => input
-            .as_str()
-            .split_whitespace()
-            .map(|n| n.parse().unwrap())
-            .collect(),
-        Err(_) => default,
-    }
-}
+use cses::util::{input_single, input_vector};
 
 use std::collections::VecDeque;
 fn main(){
     let n: usize = input_single(0);
     let mut employees: Vec<usize> = vec![0; n+1];
-    let boss: Vec<usize> = input_vector(vec![]);
+    let mut boss: Vec<usize> = input_vector(vec![]);
     let mut q: VecDeque<usize> = VecDeque::new();
     let mut adj: Vec<Vec<usize>> = vec![vec![]; n+1];
 
@@ -53,12 +24,16 @@ fn main(){
             }
         }
     }
+    dbg!(&adj);
+    dbg!(&stack);
     while !stack.is_empty(){
         let emp = stack.pop().unwrap();
+        dbg!(emp);
         if emp > 1{
             employees[boss[emp-2]] += employees[emp] + 1; 
         }
     }
+    dbg!(&employees);
     for i in 1..employees.len(){
         print!("{} ", employees[i]);
     }
