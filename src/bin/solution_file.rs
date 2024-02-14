@@ -31,35 +31,35 @@ where
 
 use std::collections::VecDeque;
 fn main(){
-    let n: usize = input_single(0);
-    let mut employees: Vec<usize> = vec![0; n+1];
-    let boss: Vec<usize> = input_vector(vec![]);
-    let mut q: VecDeque<usize> = VecDeque::new();
+    let n:usize = input_single(0);
     let mut adj: Vec<Vec<usize>> = vec![vec![]; n+1];
-
-    for (i, &e) in boss.iter().enumerate(){
-        adj[e].push(i+2);
+    for _ in 0..n-1{
+        let input: Vec<usize> = input_vector(vec![]);
+        let (a,b) = (input[0], input[1]);
+        adj[a].push(b);
+        adj[b].push(a);
     }
+    for i in 1..=n{
+        let d = distance(&adj, i);
+        print!("{} ", d);
+    }
+}
+
+fn distance(adj: &Vec<Vec<usize>>, start: usize) -> usize{
+    let n = adj.len()-1;
+    let mut q: VecDeque<(usize, usize)> = VecDeque::new();
     let mut visited: Vec<bool> = vec![false; n+1];
-    q.push_back(1);
-    let mut stack: Vec<usize> = vec![];
+    q.push_back((0, start));
+    let mut max_distance: usize = 0;
     while !q.is_empty(){
-        let top = q.pop_front().unwrap();
+        let (distance, top) = q.pop_front().unwrap();
         visited[top] = true;
-        stack.push(top);
-        for &s in adj[top].iter(){
-            if !visited[s]{
-                q.push_back(s);
+        max_distance = distance;
+        for &n in adj[top].iter(){
+            if !visited[n]{
+                q.push_back((distance + 1, n));
             }
         }
     }
-    while !stack.is_empty(){
-        let emp = stack.pop().unwrap();
-        if emp > 1{
-            employees[boss[emp-2]] += employees[emp] + 1; 
-        }
-    }
-    for i in 1..employees.len(){
-        print!("{} ", employees[i]);
-    }
+    max_distance
 }

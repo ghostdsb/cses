@@ -52,3 +52,4 @@ GRAPH
 
 TREE
 - [subordinates](./src/bin/tree_subordinates.rs)
+- [tree_diameter](./src/bin/tree_tree_diameter.rs)
